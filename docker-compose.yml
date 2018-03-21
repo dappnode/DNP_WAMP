@@ -3,7 +3,7 @@ version: '3.4'
 services:
   dnp_wamp:
     build: ./build
-    image: dnp_wamp
+    image: dappnode/dnp_wamp
     container_name: dnp_wamp
     ports:
       - 8000:8000
