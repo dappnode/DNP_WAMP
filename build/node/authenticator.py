@@ -49,13 +49,13 @@ class AuthenticatorSession(ApplicationSession):
          pprint(details)
          if re.match(r'tcp4:172\.33\.10\..*:.*', details["transport"]["peer"]):
             principal = {
-              u'realm': principal[u'dappnode_admin'],
+              u'realm': u'dappnode_admin',
               u'role': u'admin',
             } 
             return principal
          elif re.match(r'tcp4:172\.33\.1\..*:.*', details["transport"]["peer"]):
             principal = {
-              u'realm': principal[u'core_package'],
+              u'realm': u'core_package',
               u'role': u'public',
             } 
             return principal
