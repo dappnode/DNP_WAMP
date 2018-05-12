@@ -86,7 +86,13 @@
                     "rawsocket": {},
                     "websocket": {
                         "ws": {
-                            "type": "websocket"
+                            "type": "websocket",
+                            "auth": {
+                                "anonymous": {
+                                    "type": "dynamic",
+                                    "authenticator": "authenticate.wamp.dnp.dappnode.eth"
+                                }
+                            }
                         }
                     }
                 }
