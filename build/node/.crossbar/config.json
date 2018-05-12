@@ -4,12 +4,57 @@
     "workers": [
         {
             "type": "router",
+            "options": {
+                "pythonpath": [
+                    ".."
+                ]
+            },
             "realms": [
                 {
-                    "name": "realm1",
+                    "name": "dappnode_admin",
                     "roles": [
                         {
-                            "name": "anonymous",
+                            "name": "authenticator",
+                            "permissions": [
+                                {
+                                    "uri": "authenticate.wamp.dnp.dappnode.eth",
+                                    "match": "exact",
+                                    "allow": {
+                                        "call": false,
+                                        "register": true,
+                                        "publish": false,
+                                        "subscribe": false
+                                    },
+                                    "disclose": {
+                                        "caller": false,
+                                        "publisher": false
+                                    },
+                                    "cache": true
+                                }
+                            ]
+                        },
+                        {
+                            "name": "admin",
+                            "permissions": [
+                                {
+                                    "uri": "",
+                                    "match": "prefix",
+                                    "allow": {
+                                        "call": true,
+                                        "register": true,
+                                        "publish": true,
+                                        "subscribe": true
+                                    },
+                                    "disclose": {
+                                        "caller": false,
+                                        "publisher": false
+                                    },
+                                    "cache": true
+                                }
+                            ]
+                        },
+                        {
+                            "name": "core_package",
                             "permissions": [
                                 {
                                     "uri": "",
@@ -38,20 +83,20 @@
                         "type": "tcp",
                         "port": 8080
                     },
-                    "rawsocket": {
-                    },
+                    "rawsocket": {},
                     "websocket": {
                         "ws": {
                             "type": "websocket"
                         }
-                    },
-                    "web": {
-                        "paths": {
-                            "/": {
-                                "type": "nodeinfo"
-                            }
-                        }
                     }
+                }
+            ],
+            "components": [
+                {
+                    "type": "class",
+                    "classname": "authenticator.AuthenticatorSession",
+                    "realm": "dappnode_admin",
+                    "role": "authenticator"
                 }
             ]
         }
