@@ -55,8 +55,8 @@ class AuthenticatorSession(ApplicationSession):
             return principal
          elif re.match(r'tcp4:172\.33\.1\..*:.*', details["transport"]["peer"]):
             principal = {
-              u'realm': u'core_package',
-              u'role': u'public',
+              u'realm': u'dappnode_admin',
+              u'role': u'core_package',
             } 
             return principal
          else:
