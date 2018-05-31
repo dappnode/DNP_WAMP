@@ -27,10 +27,10 @@ RUN apk --update upgrade \
     && apk add --virtual .build-deps \
                build-base \
                libffi-dev \
-               openssl-dev \
+               libressl-dev \
                linux-headers \
     && pip install --no-cache-dir -U pip \
-    && pip install --no-cache-dir crossbar>=${CROSSBAR_VERSION} \
+    && pip install --no-cache-dir crossbar \
     && apk del .build-deps
 
 # test if everything installed properly

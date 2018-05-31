@@ -1,0 +1,19 @@
+version: '3.4'
+
+networks:
+    network:
+        driver: bridge
+        ipam:
+            config:
+                - subnet: 172.33.0.0/16
+
+services:
+  wamp.dnp.dappnode.eth:
+    build: ./build
+    image: wamp.dnp.dappnode.eth:0.1.0
+    container_name: DAppNodeCore-wamp.dnp.dappnode.eth
+    restart: always
+    dns: 172.33.1.2
+    networks:
+      network:
+        ipv4_address: 172.33.1.8
