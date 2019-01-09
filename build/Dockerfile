@@ -44,9 +44,6 @@ RUN addgroup -S -g 242 crossbar \
 COPY ./node/ /node/
 RUN chown -R crossbar:crossbar /node
 
-# make /node a volume to allow external configuration
-VOLUME /node
-
 # set the Crossbar.io node directory as working directory
 WORKDIR /node
 
