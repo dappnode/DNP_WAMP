@@ -1,23 +1,19 @@
 {
   "name": "wamp.dnp.dappnode.eth",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Dappnode package responsible for providing WAMP communication, based on crossbar.io",
   "avatar": "/ipfs/QmSM4ygnbsL7WzbgjggKNVqDurD4cfbFAQMqcKWBMgyPaf",
   "type": "dncore",
   "image": {
-    "path": "wamp.dnp.dappnode.eth_0.1.0.tar.xz",
-    "hash": "/ipfs/QmTh5RVaeCNHenDjeGFDUup8Cr3uToqL24D8FzFuzp6g9W",
-    "size": 37531902,
+    "path": "",
+    "hash": "",
+    "size": "",
     "restart": "always",
     "subnet": "172.33.0.0/16",
     "ipv4_address": "172.33.1.8"
   },
   "author": "Eduardo Antuña <eduadiez@gmail.com> (https://github.com/eduadiez)",
-  "keywords": [
-    "DAppNodeCore",
-    "WAMP",
-    "crossbar"
-  ],
+  "keywords": ["DAppNodeCore", "WAMP", "crossbar"],
   "homepage": "https://github.com/dappnode/DNP_WAMP#readme",
   "repository": {
     "type": "git",
