@@ -5,15 +5,19 @@
   "avatar": "/ipfs/QmSM4ygnbsL7WzbgjggKNVqDurD4cfbFAQMqcKWBMgyPaf",
   "type": "dncore",
   "image": {
-    "path": "",
-    "hash": "",
-    "size": "",
+    "path": "wamp.dnp.dappnode.eth_0.1.1.tar.xz",
+    "hash": "/ipfs/QmQpc1Fy9gJ4c7dgqg9VR8bbQXUwoczxnrsPRZKcMEs2w8",
+    "size": 38269378,
     "restart": "always",
     "subnet": "172.33.0.0/16",
     "ipv4_address": "172.33.1.8"
   },
   "author": "Eduardo Antuña <eduadiez@gmail.com> (https://github.com/eduadiez)",
-  "keywords": ["DAppNodeCore", "WAMP", "crossbar"],
+  "keywords": [
+    "DAppNodeCore",
+    "WAMP",
+    "crossbar"
+  ],
   "homepage": "https://github.com/dappnode/DNP_WAMP#readme",
   "repository": {
     "type": "git",
