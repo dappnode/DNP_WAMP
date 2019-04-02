@@ -26,6 +26,7 @@ RUN apk --update upgrade \
     && apk add libffi libressl2.7-libssl \
     && apk add --virtual .build-deps \
                build-base \
+               snappy-dev \
                libffi-dev \
                libressl-dev \
                linux-headers \
