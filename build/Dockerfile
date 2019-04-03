@@ -29,6 +29,7 @@ RUN apk --update upgrade \
                libffi-dev \
                libressl-dev \
                linux-headers \
+               snappy-dev \
     && pip install --no-cache-dir -U pip \
     && pip install --no-cache-dir crossbar \
     && apk del .build-deps
