@@ -1,6 +1,6 @@
 {
   "name": "wamp.dnp.dappnode.eth",
-  "version": "0.1.1",
+  "version": "0.2.1",
   "description": "Dappnode package responsible for providing WAMP communication, based on crossbar.io",
   "avatar": "/ipfs/QmSM4ygnbsL7WzbgjggKNVqDurD4cfbFAQMqcKWBMgyPaf",
   "type": "dncore",
