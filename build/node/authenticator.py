@@ -51,14 +51,23 @@ class AuthenticatorSession(ApplicationSession):
             principal = {
               u'realm': u'dappnode_admin',
               u'role': u'admin',
-            } 
+            }
             return principal
          elif re.match(r'tcp4:172\.33\.1\..*:.*', details["transport"]["peer"]):
             principal = {
               u'realm': u'dappnode_admin',
               u'role': u'core_package',
-            } 
+            }
             return principal
+         elif os.environ.get("EXTRA_IPS") != None:
+            for ip in os.environ.get("EXTRA_IPS"):
+               ipreg = ip.replace(".",r"\.")
+               if re.match(r'tcp4:%s:.*' % ipreg, details["transport"]["peer"]):
+                  principal = {
+                     u'realm': u'dappnode_admin',
+                     u'role': u'core_package',
+                  }
+                  return principal
          else:
             raise ApplicationError("no_such_user.authenticate.wamp.dnp.dappnode.eth", "could not authenticate session - no such principal {}".format(authid))
 
