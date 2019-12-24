@@ -47,7 +47,13 @@ class AuthenticatorSession(ApplicationSession):
       def authenticate(realm, authid, details):
          print("WAMP-Anonymous dynamic authenticator invoked: realm='{}', authid='{}'".format(realm, authid))
          pprint(details)
-         if re.match(r'tcp4:172\.33\.1[0-2]\..*:.*', details["transport"]["peer"]):
+         if re.match(r'tcp4:172\.33\.[8-9]\..*:.*', details["transport"]["peer"]):
+            principal = {
+              u'realm': u'dappnode_admin',
+              u'role': u'admin',
+            } 
+            return principal
+         elif re.match(r'tcp4:172\.33\.1[0-2]\..*:.*', details["transport"]["peer"]):
             principal = {
               u'realm': u'dappnode_admin',
               u'role': u'admin',
