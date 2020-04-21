@@ -1,17 +1,8 @@
 {
   "name": "wamp.dnp.dappnode.eth",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Dappnode package responsible for providing WAMP communication, based on crossbar.io",
-  "avatar": "/ipfs/QmSM4ygnbsL7WzbgjggKNVqDurD4cfbFAQMqcKWBMgyPaf",
   "type": "dncore",
-  "image": {
-    "path": "",
-    "hash": "",
-    "size": "",
-    "restart": "always",
-    "subnet": "172.33.0.0/16",
-    "ipv4_address": "172.33.1.8"
-  },
   "author": "DAppNode Association <admin@dappnode.io> (https://github.com/dappnode)",
   "contributors": [
     "Eduardo Antuña <eduadiez@gmail.com> (https://github.com/eduadiez)"

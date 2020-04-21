@@ -18,6 +18,4 @@ services:
       network:
         ipv4_address: 172.33.1.8
     logging:
-      options:
-        max-size: "10m"
-        max-file: "3"
+      driver: journald
