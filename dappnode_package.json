@@ -7,7 +7,11 @@
   "contributors": [
     "Eduardo Antuña <eduadiez@gmail.com> (https://github.com/eduadiez)"
   ],
-  "keywords": ["DAppNodeCore", "WAMP", "crossbar"],
+  "keywords": [
+    "DAppNodeCore",
+    "WAMP",
+    "crossbar"
+  ],
   "links": {
     "homepage": "https://github.com/dappnode/DNP_WAMP#readme"
   },

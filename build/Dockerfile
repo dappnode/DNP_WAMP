@@ -23,7 +23,7 @@ ENV PYTHONUNBUFFERED 1
 
 # install dependencies and Crossbar.io
 RUN apk --update upgrade \
-    && apk add libffi libressl2.7-libssl \
+    && apk add libffi libressl \
     && apk add --virtual .build-deps \
                build-base \
                libffi-dev \
