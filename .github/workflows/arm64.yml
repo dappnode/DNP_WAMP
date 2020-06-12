@@ -1,0 +1,27 @@
+name: Test ARM64 builds
+
+on:
+  pull_request:
+    branches: arm64-actions
+  push:
+    branches: arm64-actions
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Enable experimental docker features
+        run: |
+          sudo rm /etc/docker/daemon.json
+          echo '{"experimental": true}' | sudo tee -a /etc/docker/daemon.json
+          sudo systemctl restart docker
+
+      - name: Enable multi-arch binaries
+        run: docker run --rm --privileged linuxkit/binfmt:v0.8
+
+      - name: Build for ARM64
+        run: |
+          cd build
+          docker build --platform arm64  --pull -t wamp.dnp.dappnode.eth:ui  .
